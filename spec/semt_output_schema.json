@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SEMT Output Schema",
+  "type": "object",
+  "properties": {
+    "claim": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "T0",
+        "T1",
+        "\u22ac"
+      ]
+    },
+    "justification": {
+      "type": "string"
+    },
+    "verifier": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "claim",
+    "classification",
+    "verifier"
+  ]
+}
